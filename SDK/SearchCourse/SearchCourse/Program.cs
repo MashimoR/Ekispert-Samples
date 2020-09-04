@@ -1,4 +1,23 @@
-﻿using System;
+﻿// Search Course and Print Result Sample.
+//
+// ---- Route 1 ----
+// 10:02 PointA
+//  | Line
+// 10:23 PointB
+//
+// ---- Route 2 ----
+// 10:10 PointA
+//  | Line
+// 10:32 PointB
+//
+// ---- Route 3 ----
+// 10:16 PointA
+//  | LineA
+// 10:37 PointB
+//  | LineB
+// 10:37 PointC
+
+using System;
 using EXPDENGNLib;
 
 namespace SearchCourse
@@ -37,10 +56,9 @@ namespace SearchCourse
                 }
                 ExpDiaRouteSection3 lastSection = course.GetRouteSection3(course.RouteSectionCount);
                 string lastArrivalTime = lastSection.TrainInfo.DisplayTime[ARRIVAL].ToString().Insert(2, ":");
-                string lastStationName = lastSection.From.LongName;
+                string lastStationName = lastSection.To.LongName;
                 Console.WriteLine("{0} {1}", lastArrivalTime, lastStationName);
             }
-            Console.WriteLine("-----------------");
             Console.ReadLine();
         }
     }
