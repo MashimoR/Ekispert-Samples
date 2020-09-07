@@ -13,9 +13,9 @@
 // ---- Route 3 ----
 // 10:16 PointA
 //  | LineA
-// 10:37 PointB
-//  | LineB
 // 10:37 PointC
+//  | LineB
+// 10:37 PointB
 
 using System;
 using EXPDENGNLib;
